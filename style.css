@@ -1,0 +1,353 @@
+/* Brutalist UI Design Style */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Inter:wght@800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier Prime', monospace;
+  background-color: #ffffff;
+  color: #000000;
+  line-height: 1.4;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Header bölümü */
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 30px 20px;
+  border-bottom: 8px solid #ff0000;
+}
+
+header h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  text-align: left;
+  transform: skew(-5deg);
+}
+
+/* Navigasyon */
+.nav-links {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 10px 0;
+  justify-content: flex-start;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.nav-links li {
+  list-style: none;
+  margin: 0 25px 0 0;
+}
+
+.nav-links li a {
+  position: relative;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px;
+  border: 3px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-links li a:hover {
+  background-color: #ff0000;
+  border-color: #ffffff;
+  transform: rotate(-2deg);
+}
+
+/* Hover efektlerini basitleştir */
+.nav-links li a:before {
+  display: none;
+}
+
+.nav-links li.center a:hover,
+.nav-links li.upward a:hover,
+.nav-links li.forward a:hover {
+  background-color: #ff0000;
+  transform: rotate(-2deg);
+}
+
+/* Ana içerik alanı */
+main {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* İçerik bölümleri */
+section {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-bottom: 50px;
+  border: 5px solid #000000;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  background-color: #cccccc;
+  z-index: -1;
+}
+
+section h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  color: #000000;
+  transform: skew(-3deg);
+  border-bottom: 5px solid #ff0000;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Hero bölümü */
+.hero {
+  text-align: left;
+  padding: 80px 40px;
+  background-color: #ffff00;
+  border: 10px solid #000000;
+  margin-top: 20px;
+}
+
+.hero h2 {
+  font-size: 4rem;
+  border-bottom: none;
+  margin-bottom: 30px;
+}
+
+.hero-text {
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px;
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+/* Özellikler grid düzeni */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border: 5px solid #000000;
+  position: relative;
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.feature-card h3 {
+  font-family: 'Inter', sans-serif;
+  color: #000000;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+/* CTA bölümü */
+.cta {
+  text-align: center;
+  padding: 60px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+}
+
+.cta h2 {
+  color: #ffffff;
+  font-size: 3.5rem;
+}
+
+.cta p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 40px;
+  background-color: #ff0000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 5px solid #ffffff;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ff0000;
+  transform: scale(1.05);
+}
+
+/* Footer bölümü */
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 8px solid #ff0000;
+}
+
+footer p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Form düzenlemeleri */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 40px;
+  border: 5px solid #000000;
+  position: relative;
+}
+
+form::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 0, 0.4);
+  z-index: -1;
+}
+
+form label {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 3px solid #000000;
+  font-family: 'Courier Prime', monospace;
+  font-size: 1.2rem;
+  background-color: #f0f0f0;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+form button {
+  width: 100%;
+  padding: 20px;
+  background-color: #ff0000;
+  color: #ffffff;
+  border: 5px solid #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #ff0000;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 2.2rem;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .cta {
+    padding: 30px 20px;
+  }
+
+  .cta h2 {
+    font-size: 2.2rem;
+  }
+}
